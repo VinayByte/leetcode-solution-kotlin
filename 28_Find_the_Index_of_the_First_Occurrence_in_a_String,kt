@@ -1,0 +1,14 @@
+fun strStr(haystack: String, needle: String): Int {
+    val n = haystack.length
+    val m = needle.length
+
+    if (m == 0) return 0
+    if (n < m) return -1
+
+    for (i in 0..n - m) {
+        if (haystack.substring(i, i + m) == needle) {
+            return i
+        }
+    }
+    return -1
+}
